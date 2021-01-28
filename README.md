@@ -12,4 +12,4 @@
 ---
 
 ### Note
-I did this app with React Hooks, but I am familiar with the traditional React classes and lifecycle methods as well. Thank you for the opportunity. I hope the app is satisfactory.
+This app is made primarily with React Hooks, but I am familiar with the older React classes/lifecycle/Redux methodologies too. I hope this test app is satisfactory. Thank you for the opportunity. 
