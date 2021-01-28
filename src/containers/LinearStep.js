@@ -24,7 +24,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function getSteps() {
-  return ["Welcome to MoneyLion", "Details", "Email", "Agreement"];
+  return [
+    "Welcome to MoneyLion",
+    "Personal Details",
+    "Date of Birth",
+    "Agreements",
+  ];
 }
 
 export const LinearStep = () => {
@@ -83,23 +88,9 @@ export const LinearStep = () => {
             <Button onClick={handleReset}>Reset</Button>
           </div>
         ) : (
-          <div>
-            <Typography className={classes.instructions}>
-              {getStepContent(activeStep)}
-            </Typography>
-            {/* <div>
-              <Button
-                disabled={activeStep === 0}
-                onClick={handleBack}
-                className={classes.backButton}
-              >
-                Back
-              </Button>
-              <Button variant="contained" color="primary" onClick={handleNext}>
-                {activeStep === steps.length - 1 ? "Finish" : "Next"}
-              </Button>
-            </div> */}
-          </div>
+          <Typography className={classes.instructions}>
+            {getStepContent(activeStep)}
+          </Typography>
         )}
       </div>
     </div>
