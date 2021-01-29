@@ -1,6 +1,6 @@
 import React from "react";
 import { Header } from "./components/Header";
-import { LinearStep } from "./containers/LinearStep";
+import { StepContainer } from "./containers/StepContainer";
 import Container from "@material-ui/core/Container";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <React.Fragment>
       <Container maxWidth="lg">
         <Header />
-        <LinearStep />
+        <StepContainer />
       </Container>
     </React.Fragment>
   );

@@ -32,7 +32,7 @@ function getSteps() {
   ];
 }
 
-export const LinearStep = () => {
+export const StepContainer = () => {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
   const steps = getSteps();
@@ -82,13 +82,13 @@ export const LinearStep = () => {
       <div>
         {activeStep === steps.length ? (
           <div>
-            <Typography className={classes.instructions}>
+            <Typography component={"span"} className={classes.instructions}>
               All steps completed
             </Typography>
             <Button onClick={handleReset}>Reset</Button>
           </div>
         ) : (
-          <Typography className={classes.instructions}>
+          <Typography component={"span"} className={classes.instructions}>
             {getStepContent(activeStep)}
           </Typography>
         )}
