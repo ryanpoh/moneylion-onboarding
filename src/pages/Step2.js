@@ -10,7 +10,7 @@ import { Input } from "../components/Input";
 import * as yup from "yup";
 
 const schema = yup.object().shape({
-  birthday: yup.string().required("Brith date is a required field"),
+  birthday: yup.string().required("Birth date is a required field."),
 });
 
 export const Step2 = (props) => {
