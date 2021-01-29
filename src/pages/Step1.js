@@ -49,6 +49,7 @@ export const Step1 = (props) => {
           name="firstName"
           error={!!errors.firstName}
           helperText={errors?.firstName?.message}
+          required
         />
         <Input
           ref={register}
@@ -58,6 +59,7 @@ export const Step1 = (props) => {
           name="lastName"
           error={!!errors.lastName}
           helperText={errors?.lastName?.message}
+          required
         />
 
         <Input

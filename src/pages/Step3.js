@@ -69,7 +69,7 @@ export const Step3 = (props) => {
                 name="agreement1"
               />
             }
-            label="Do you agree?"
+            label="Yes, I agree."
           />
         </Box>
         <Box m={2} pt={3}>
@@ -98,7 +98,7 @@ export const Step3 = (props) => {
                 name="agreement2"
               />
             }
-            label="Do you agree?"
+            label="Yes, I agree."
           />
         </Box>
         <PrimaryButton disabled={!agreement1 || !agreement2}>
