@@ -12,13 +12,13 @@ import * as yup from "yup";
 const schema = yup.object().shape({
   firstName: yup
     .string()
-    .matches(/^([^0-9]*)$/, "First name should not contain numbers")
-    .required("First name is a required field"),
+    .matches(/^([^0-9]*)$/, "First name should not contain numbers.")
+    .required("First name is a required field."),
   lastName: yup
     .string()
-    .matches(/^([^0-9]*)$/, "Last name should not contain numbers")
-    .required("Last name is a required field"),
-  email: yup.string().email().required("Email is a required field"),
+    .matches(/^([^0-9]*)$/, "Last name should not contain numbers.")
+    .required("Last name is a required field."),
+  email: yup.string().email().required("Email is a required field."),
 });
 
 export const Step1 = (props) => {

@@ -28,6 +28,10 @@ export const Welcome = (props) => {
         "success"
       );
       setSuccess(true);
+
+      //? Normally I would check response with res.status === 200. But endpoint provided keeps returning 404 even when checked with Postman API. Not sure if API still online.
+      //? So I added the alert below, so you can see the stringified JSON data that should be sent to endpoint.
+
       alert("Sent to MockApi:" + JSON.stringify(data));
     }
   };
