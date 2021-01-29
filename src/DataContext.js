@@ -6,7 +6,6 @@ export const DataProvider = ({ children }) => {
   const [data, setData] = useState({});
 
   const setValues = (values) => {
-    console.log("ADDING DATA");
     setData((prevData) => ({
       ...prevData,
       ...values,
@@ -14,7 +13,6 @@ export const DataProvider = ({ children }) => {
   };
 
   const clearValues = () => {
-    console.log("CLEARING DATA");
     setData(() => ({}));
   };
 
