@@ -8,7 +8,7 @@ import Swal from "sweetalert2";
 import Confetti from "react-confetti";
 
 export const Welcome = (props) => {
-  const { data } = useData();
+  const { data, clearValues } = useData();
   const [success, setSuccess] = useState(false);
 
   const checkComplete = async (data) => {
@@ -36,12 +36,14 @@ export const Welcome = (props) => {
     checkComplete(data);
   }, [data]);
 
-  if (success) {
-    return <Confetti />;
-  }
+  const handleClearNext = () => {
+    clearValues();
+    props.handleNext();
+  };
 
   return (
     <Container maxWidth="sm">
+      {success && <Confetti />}
       <Typography variant="h5" align="center" color="textPrimary" gutterBottom>
         A little bit about MoneyLion...
       </Typography>
@@ -63,7 +65,7 @@ export const Welcome = (props) => {
         <Grid container spacing={2} justify="center">
           <Grid item>
             <Button
-              onClick={props.handleNext}
+              onClick={handleClearNext}
               variant="contained"
               color="primary"
             >
